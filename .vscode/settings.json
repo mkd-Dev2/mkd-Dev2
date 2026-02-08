@@ -1,0 +1,499 @@
+{
+  // ============ EDITOR SETTINGS ============
+  "editor.fontSize": 12,
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.6,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.renderControlCharacters": false,
+  "editor.minimap.enabled": true,
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.maxColumn": 120,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
+  "editor.suggestSelection": "first",
+  "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 100,
+  "editor.rulers": [80, 100],
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggest.preview": true,
+  "editor.snippetSuggestions": "inline",
+  "editor.quickSuggestions": {
+    "strings": true,
+    "comments": true,
+    "other": true
+  },
+  "editor.parameterHints.enabled": true,
+  "editor.linkedEditing": true,
+
+  // ============ FORMATTING & LINTING ============
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.addMissingImports": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.semi": true,
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.bracketSameLine": false,
+  "prettier.jsxBracketSameLine": false,
+
+  // ============ WORKSPACE & UI ============
+  "workbench.activityBar.location": "top",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 16,
+  "workbench.sideBar.location": "left",
+  "workbench.editor.showIcons": true,
+  "window.restoreFullscreen": true,
+  "window.zoomLevel": 0,
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}",
+
+  // ============ FILE MANAGEMENT ============
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 1000,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/coverage": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.next/*/**": true,
+    "**/dist/*/**": true,
+    "**/build/*/**": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "type",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.map, ${capture}.d.ts",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js, ${capture}.css, ${capture}.module.css",
+    "*.tsx": "${capture}.ts, ${capture}.css, ${capture}.module.css, ${capture}.test.tsx, ${capture}.spec.tsx",
+    "package.json": "package-lock.json, yarn.lock, .npmrc, .nvmrc, .gitignore, README.md, tsconfig.json, .env, .env.example"
+  },
+
+  // ============ TERMINAL ============
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontFamily": "'Cascadia Code', 'JetBrains Mono', Consolas, monospace",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.localEchoLatencyThreshold": -1,
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.localEchoEnabled": "off",
+  "terminal.integrated.localEchoExcludePrograms": [
+    "vim",
+    "vi",
+    "nano",
+    "tmux"
+  ],
+  "terminal.integrated.enableFileLinks": false,
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.tabs.location": "left",
+
+  // ============ URL HANDLING FIX ============
+  "editor.stablePeek": true,
+  "workbench.editor.revealIfOpen": true,
+
+  // ============ REACT/JS/TS SPECIFIC ============
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.suggest.paths": true,
+  "javascript.suggest.paths": true,
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "javascript.preferences.includePackageJsonAutoImports": "on",
+
+  // ============ LANGUAGE SPECIFIC FORMATTERS ============
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+
+  // ============ EXTENSIONS CONFIG ============
+
+  // ============ AI & COMPLETION EXTENSIONS ============
+  "tabnine.experimentalAutoImports": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "claudeCode.preferredLocation": "panel",
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "/home/cypher/.aitk/instructions/": true
+  },
+  "diffEditor.codeLens": true,
+
+  // ============ GITLENS (Essential Git Extension) ============
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": true,
+  "gitlens.statusBar.alignment": "right",
+  "gitlens.blame.heatmap.enabled": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": true,
+    "suppressShowKeyBindingsNotice": true
+  },
+
+  // ============ ERROR LENS (Inline Error Display) ============
+  "errorLens.enabled": true,
+  "errorLens.fontStyle": "italic",
+  "errorLens.messageBackgroundMode": "message",
+  "errorLens.messageTemplate": "$message [$source/$code]",
+  "errorLens.delay": 1000,
+  "errorLens.excludeBySource": [],
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.statusBarIconsEnabled": true,
+
+  // ============ TODO TREE (Task Management) ============
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "NOTE",
+    "OPTIMIZE",
+    "REVIEW",
+    "DEPRECATED"
+  ],
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "type": "text",
+    "foreground": "#FF6B6B",
+    "background": "transparent",
+    "opacity": 50,
+    "iconColour": "#FF6B6B"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "foreground": "#FFD93D",
+      "iconColour": "#FFD93D"
+    },
+    "FIXME": {
+      "icon": "flame",
+      "foreground": "#FF6B6B",
+      "iconColour": "#FF6B6B"
+    },
+    "NOTE": {
+      "icon": "note",
+      "foreground": "#6BCB77",
+      "iconColour": "#6BCB77"
+    }
+  },
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+
+  // ============ IMPORT COST (Bundle Size Awareness) ============
+  "importCost.verbose": false,
+  "importCost.timeout": 20000,
+  "importCost.bundleSizeDecoration": "both",
+  "importCost.smallPackageSize": 10,
+  "importCost.mediumPackageSize": 50,
+  "importCost.largePackageSize": 100,
+  "importCost.showCalculatingDecoration": true,
+
+  // ============ AUTO RENAME TAG (HTML/JSX) ============
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "xml",
+    "php",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
+
+  // ============ BRACKET PAIR COLORIZER ============
+  "bracket-pair-colorizer-2.colors": [
+    "Gold",
+    "Orchid",
+    "LightSkyBlue"
+  ],
+  "bracket-pair-colorizer-2.forceUniqueOpeningColor": false,
+  "bracket-pair-colorizer-2.forceIterationColorCycle": true,
+
+  // ============ REST CLIENT (API Testing) ============
+  "rest-client.enableTelemetry": false,
+  "rest-client.followRedirect": true,
+  "rest-client.defaultHeaders": {
+    "User-Agent": "vscode-restclient",
+    "Content-Type": "application/json"
+  },
+  "rest-client.previewOption": "full",
+  "rest-client.rememberCookiesForSubsequentRequests": true,
+
+  // ============ THUNDER CLIENT (Alternative API Testing) ============
+  "thunder-client.saveToWorkspace": true,
+  "thunder-client.autoSaveRequest": true,
+  "thunder-client.envVariables": {},
+
+  // ============ TAILWIND CSS INTELLISENSE ============
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "javascriptreact": "javascriptreact",
+    "typescriptreact": "typescriptreact"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.colorDecorators": true,
+  "tailwindCSS.validate": true,
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)",
+    "tw=\"([^\"]*)",
+    "tw={\"([^\"}]*)",
+    "tw\\.\\w+`([^`]*)",
+    "tw\\(.*?\\)`([^`]*)"
+  ],
+
+  // ============ PRETTIER ============
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false,
+  "prettier.documentSelectors": [
+    "**/*.{js,jsx,ts,tsx,vue,html,css,scss,less,json,md}"
+  ],
+
+  // ============ ESLINT ============
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html"
+  ],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+
+  // ============ PATH INTELLISENSE ============
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.mappings": {
+    "/src": "${workspaceRoot}/src",
+    "/components": "${workspaceRoot}/src/components",
+    "/utils": "${workspaceRoot}/src/utils",
+    "/hooks": "${workspaceRoot}/src/hooks",
+    "/styles": "${workspaceRoot}/src/styles"
+  },
+
+  // ============ LIVE SHARE (Collaboration) ============
+  "liveshare.guestApprovalRequired": true,
+  "liveshare.showInStatusBar": "always",
+  "liveshare.allowGuestDebugControl": false,
+  "liveshare.allowGuestTaskControl": false,
+
+  // ============ CODE METRICS (Code Quality) ============
+  "codemetrics.basics.CodeLensHiddenUnder": 0,
+  "codemetrics.basics.ForegroundColor": "#b3b3b3",
+  "codemetrics.basics.ComplexityLevelExtreme": 50,
+  "codemetrics.basics.ComplexityLevelHigh": 25,
+  "codemetrics.basics.ComplexityLevelNormal": 15,
+  "codemetrics.basics.ComplexityLevelLow": 10,
+
+  // ============ EMMET ============
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+    "vue": "html",
+    "vue-html": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.preferences": {
+    "css.propertyEnd": ";"
+  },
+
+  // ============ SEARCH ============
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.next": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true
+  },
+  "search.useIgnoreFiles": true,
+  "search.followSymlinks": false,
+  "search.maxResults": 2000,
+
+  // ============ DEBUGGER ============
+  "debug.console.fontSize": 13,
+  "debug.console.lineHeight": 1.4,
+  "debug.toolBarLocation": "docked",
+  "debug.javascript.autoAttachFilter": "smart",
+  "debug.openDebug": "openOnDebugBreak",
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  "debug.showInStatusBar": "always",
+
+  // ============ REACT DEVELOPER TOOLS ============
+  "reactSnippets.settings.importReactOnTop": true,
+
+  // ============ SCSS ============
+  "scss.lint.unknownProperties": "ignore",
+  "css.lint.unknownProperties": "ignore",
+  "css.validate": true,
+  "scss.validate": true,
+
+  // ============ GIT ============
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.ignoreRebaseWarning": true,
+  "git.decorations.enabled": true,
+  "git.inputValidation": true,
+  "git.mergeEditor": false,
+
+  // ============ ICON THEMES ============
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.activeIconPack": "react",
+  "material-icon-theme.files.associations": {
+    "*.tsx": "react_ts",
+    "*.jsx": "react",
+    "*.test.js": "test-js",
+    "*.test.ts": "test-ts",
+    "*.test.jsx": "test-js",
+    "*.test.tsx": "test-ts"
+  },
+  "material-icon-theme.folders.associations": {
+    "components": "react-components",
+    "hooks": "hook",
+    "context": "context",
+    "utils": "tools",
+    "styles": "style",
+    "types": "typescript-def",
+    "tests": "test"
+  },
+
+  // ============ PRODUCTIVITY & NAVIGATION ============
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.navigateThroughAllFiles": true,
+  "bookmarks.useWorkaroundForMultiline": true,
+  "bookmarks.gutterClickAction": "toggle",
+  "bookmarks.workbench.tree.visible": true,
+
+  // ============ MARKDOWN ============
+  "markdown.preview.breaks": true,
+  "markdown.preview.linkify": true,
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.scrollPreviewWithEditor": true,
+
+  // ============ VISUAL STUDIO INTELLICODE ============
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "vsintellicode.features.python.deepLearning": "enabled"
+}
