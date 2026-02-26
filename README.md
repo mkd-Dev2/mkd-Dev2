@@ -1,6 +1,6 @@
-# Syfer's Portfolio Website
+# mkd-Dev2 Portfolio Website
 
-This repository hosts the code for Syfer's personal portfolio website, a comprehensive platform designed to showcase skills, projects, certifications, and blog posts. Built with modern web technologies, it offers a clean, responsive, and engaging user experience. The project is structured with a distinct frontend and backend, ensuring scalability and maintainability.
+This repository hosts the code for mkd-Dev2 personal portfolio website, a comprehensive platform designed to showcase skills, projects, certifications, and blog posts. Built with modern web technologies, it offers a clean, responsive, and engaging user experience. The project is structured with a distinct frontend and backend, ensuring scalability and maintainability.
 
 ## Table of Contents
 - [Features](#features)
