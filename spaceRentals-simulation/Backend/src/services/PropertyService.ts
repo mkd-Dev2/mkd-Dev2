@@ -17,7 +17,10 @@ export class PropertyService {
       prisma.property.findMany({
         skip, take: limit,
         include: { landlord: { select: { id: true, name: true } }, propertyVerification: { select: { status: true, level: true } } },
-        orderBy: { createdAt: 'desc' },
+        orderBy: [
+          { premiumBoostUntil: { sort: 'desc', nulls: 'last' } },
+          { createdAt: 'desc' },
+        ],
       }),
       prisma.property.count(),
     ]);
@@ -207,7 +210,10 @@ export class PropertyService {
         where,
         skip, take: limit,
         include: { landlord: { select: { id: true, name: true } }, propertyVerification: { select: { status: true, level: true } } },
-        orderBy: { createdAt: 'desc' },
+        orderBy: [
+          { premiumBoostUntil: { sort: 'desc', nulls: 'last' } },
+          { createdAt: 'desc' },
+        ],
       }),
       prisma.property.count({ where }),
     ]);

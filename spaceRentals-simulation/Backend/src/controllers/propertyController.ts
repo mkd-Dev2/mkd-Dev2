@@ -104,3 +104,37 @@ export const searchProperties = async (req: AuthRequest, res: Response) => {
     }));
   } catch (err) { return handle(res, err); }
 };
+
+// POST /api/properties/:id/boost
+export const boostProperty = async (req: AuthRequest, res: Response) => {
+  try {
+    const propertyId = String(req.params.id);
+    const userId = req.user!.userId;
+    const role = req.user!.role;
+
+    // Verify the property belongs to this landlord
+    const property = await propertyService.getById(propertyId);
+    if (!property) return res.status(404).json({ message: 'Property not found' });
+    if ((property as any).landlordId !== userId && role !== 'admin') {
+      return res.status(403).json({ message: 'Not authorized to boost this property' });
+    }
+
+    // Set boost for 7 days from now (5000 XAF payment mocked — real Fapshi integration pending)
+    const boostUntil = new Date();
+    boostUntil.setDate(boostUntil.getDate() + 7);
+
+    const { PrismaClient } = await import('@prisma/client');
+    const prisma = new PrismaClient();
+    const updated = await prisma.property.update({
+      where: { id: propertyId },
+      data: { premiumBoostUntil: boostUntil },
+    });
+    await prisma.$disconnect();
+
+    return res.json({
+      message: 'Property boosted successfully for 7 days',
+      premiumBoostUntil: boostUntil,
+      property: updated,
+    });
+  } catch (err) { return handle(res, err); }
+};

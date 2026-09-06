@@ -85,6 +85,10 @@ model Property {
   acquisitionSource        String   @default("LANDLORD") // DIRECT, AGENT, LANDLORD, ADMIN, IMPORT
   acquisitionAgentId       String?
   lastConfirmedAvailableAt DateTime @default(now())
+  videoUrls                String   @default("[]") // JSON array of video tour URLs
+  premiumBoostUntil        DateTime? // When set, this property is boosted to top of feed
+  microMarket              String?   // e.g. "Soa", "Bonamoussadi", "Bastos"
+  applicationFeeRequired   Boolean  @default(true) // 2500 XAF fee required to apply
   createdAt                DateTime @default(now())
   updatedAt                DateTime @default(now()) @updatedAt
 
@@ -99,6 +103,8 @@ model Property {
   @@index([location])
   @@index([monthlyRent])
   @@index([h3Index])
+  @@index([premiumBoostUntil])
+  @@index([microMarket])
 }
 
 model PropertyVerification {

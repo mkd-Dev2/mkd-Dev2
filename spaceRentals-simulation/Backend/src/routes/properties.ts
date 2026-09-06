@@ -12,6 +12,7 @@ import {
   unpublishProperty,
   confirmAvailability,
   searchProperties,
+  boostProperty,
 } from '../controllers/propertyController';
 import { validateRequest } from '../middleware/validateMiddleware';
 import { createPropertySchema } from '../utils/schemas';
@@ -33,5 +34,6 @@ router.delete('/:id',                     authenticate, requireLandlord, deleteP
 router.patch('/:id/publish',              authenticate, requireLandlord, publishProperty);
 router.patch('/:id/unpublish',            authenticate, requireLandlord, unpublishProperty);
 router.patch('/:id/confirm-availability', authenticate, requireLandlord, confirmAvailability);
+router.post('/:id/boost',                 authenticate, requireLandlord, boostProperty);
 
 export default router;
