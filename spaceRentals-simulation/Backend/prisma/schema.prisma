@@ -40,6 +40,8 @@ model User {
   maintenanceRequests MaintenanceRequest[] @relation("TenantMaintenanceRequests")
   reviewsGiven      Review[]           @relation("TenantReviews")
   reviewsReceived   Review[]           @relation("LandlordReviews")
+  followers         Follow[]           @relation("UserFollowing")
+  following         Follow[]           @relation("UserFollowers")
 }
 
 model AgentVerification {
@@ -331,4 +333,18 @@ model Review {
   @@unique([propertyId, tenantId])
   @@index([propertyId])
   @@index([landlordId])
+}
+
+model Follow {
+  id          String   @id @default(uuid())
+  followerId  String
+  followingId String
+  createdAt   DateTime @default(now())
+
+  follower  User @relation("UserFollowers",  fields: [followerId],  references: [id], onDelete: Cascade)
+  following User @relation("UserFollowing", fields: [followingId], references: [id], onDelete: Cascade)
+
+  @@unique([followerId, followingId])
+  @@index([followerId])
+  @@index([followingId])
 }
